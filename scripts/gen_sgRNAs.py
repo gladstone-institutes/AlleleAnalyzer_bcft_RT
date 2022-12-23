@@ -54,7 +54,7 @@ import logging
 
 __version__ = "0.0.1"
 
-REQUIRED_BCFTOOLS_VER = "1.5"
+REQUIRED_BCFTOOLS_VER = "1.15"
 
 # COLUMN_ORDER=['chrom','variant_position','ref','alt','gRNA_ref','gRNA_alt',
 # 'variant_position_in_guide','start','stop','strand','cas_type','guide_id','rsID','AF']

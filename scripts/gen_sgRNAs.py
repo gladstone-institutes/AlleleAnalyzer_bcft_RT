@@ -483,7 +483,8 @@ def get_allele_spec_guides(args, locus="ignore"):
     if not gens.empty:
         variants = set(gens.pos.tolist())
         # var_annots = pd.read_hdf(args["<annots_file>"]).query('(chrom == @chrom) and (pos >= @start) and (pos <= @stop)')
-        var_annots = pd.read_hdf(args["<annots_file>"]).query('(chrom == @chrom) and (pos in @variants)')
+        chrom_int = int(chrom)
+        var_annots = pd.read_hdf(args["<annots_file>"]).query('(chrom == @chrom_int) and (pos in @variants)')
 
 
     # remove big indels

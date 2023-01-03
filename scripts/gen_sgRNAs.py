@@ -416,6 +416,7 @@ def get_allele_spec_guides(args, locus="ignore"):
         chrstart = False
 
     chrom = norm_chr(chrom, chrstart)
+    chrom = int(chrom)
     # eliminates rows with missing genotypes and gets those where heterozygous
     # bcl_v = f"bcftools view -g ^miss -g het -r {chrom}:{start}-{stop} -H {bcf}"
     # bcl_view = subprocess.Popen(f'bcftools view -g ^miss -g het -r {chrom}:{start}-{stop} {bcf} -Ou | bcftools query -f"%CHROM\t%POS\t%REF\t[%TGT]\n"', 
